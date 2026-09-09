@@ -1,0 +1,525 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar {
+    background-color: red;
+    width: 340px;
+    border-radius: 1rem;
+    /*16px*/
+    background-color: black;
+    margin-right: 0.5rem;
+}
+
+.main-content {
+    background-color: blue;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    background-color: #121212;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    background-color: #232323;
+    height: 9rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.badge {
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.dark-badge {
+    background-color: black;
+    color: white;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items {
+    margin: 1rem;
+}
+
+@media (max-width : 1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+.card {
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.footer {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+/* ================= MUSIC PLAYER ================= */
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+
+/* ================= ALBUM ================= */
+
+.album {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+}
+
+.album-div-img {
+    display: flex;
+    align-items: center;
+}
+
+.album-img {
+    height: 56px;
+    width: 56px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.album-text-1 {
+    width: 90px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-text-2 {
+    padding: 0 0 6px;
+    width: 90px;
+    height: 16px;
+    margin: 0;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.div-album-icon {
+    height: 16px;
+    width: 16px;
+    opacity: 0.7;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.div-album-icon:hover {
+    opacity: 1;
+}
+
+
+/* ================= PLAYER ================= */
+
+.player {
+    width: 40%;
+    min-width: 0;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.5;
+    flex-shrink: 0;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+
+/* ================= PLAYBACK BAR ================= */
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.curr-time,
+.tot-time {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bb760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+
+/* ================= RIGHT CONTROLS ================= */
+
+.controls {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    min-width: 0;
+}
+
+.controls i {
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
+.controls i:hover {
+    opacity: 1;
+}
+
+.volume-bar {
+    width: 90px;
+    height: 4px;
+    cursor: pointer;
+    accent-color: white;
+    flex-shrink: 1;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .album {
+        width: 25%;
+    }
+
+    .player {
+        width: 45%;
+    }
+
+    .controls {
+        width: 30%;
+        gap: 10px;
+    }
+
+    .volume-bar {
+        width: 70px;
+    }
+
+    .player-control-icon {
+        margin-right: 1rem;
+    }
+}
+
+
+/* ================= SMALL SCREEN ================= */
+
+@media (max-width: 800px) {
+
+    .album {
+        width: 25%;
+    }
+
+    .album-img {
+        height: 48px;
+        width: 48px;
+    }
+
+    .album-text-1,
+    .album-text-2 {
+        width: 70px;
+    }
+
+    .player {
+        width: 45%;
+    }
+
+    .player-control-icon {
+        margin-right: 0.8rem;
+    }
+
+    .controls {
+        width: 30%;
+        gap: 8px;
+    }
+
+    .volume-bar {
+        width: 55px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .music-player {
+        height: 70px;
+        padding: 6px 10px;
+    }
+
+    .album {
+        width: 30%;
+    }
+
+    .album-img {
+        height: 44px;
+        width: 44px;
+        margin-right: 8px;
+    }
+
+    .album-text-1,
+    .album-text-2 {
+        width: 55px;
+    }
+
+    .album-text-1 {
+        font-size: 12px;
+    }
+
+    .album-text-2 {
+        font-size: 10px;
+    }
+
+    .div-album-icon {
+        display: none;
+    }
+
+    .player {
+        width: 40%;
+    }
+
+    .player-control-icon {
+        height: 0.8rem;
+        margin-right: 0.5rem;
+    }
+
+    .player-control-icon.icon-3 {
+        height: 1.6rem !important;
+    }
+
+    .controls {
+        width: 30%;
+        gap: 6px;
+    }
+
+    .controls i {
+        font-size: 13px;
+    }
+
+    .volume-bar {
+        display: none;
+    }
+
+    .controls i:nth-of-type(1),
+    .controls i:nth-of-type(2),
+    .controls i:nth-of-type(3) {
+        display: none;
+    }
+
+    .playback-bar .curr-time,
+    .playback-bar .tot-time {
+        display: none;
+    }
+
+    .progress-bar {
+        width: 90%;
+    }
+}

@@ -2,6 +2,8 @@
 
 A Spotify-inspired music player user interface built using HTML and CSS.
 
+![Spotify Clone Screenshot](spotify-clone-screenshot.png)
+
 ## 📌 About the Project
 
 This project is a frontend recreation of the Spotify web player interface.  
